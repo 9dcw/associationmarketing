@@ -76,6 +76,8 @@
   }
 }
 
+
+
 antibutton {
   background: none!important;
   border: none;
@@ -4686,9 +4688,9 @@ textarea.form-control-lg {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: 1rem;
-  color: #000000;
+  color: #ffff;
   text-align: left;
-  background-color: #fff;
+  background-color: #000;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -4739,7 +4741,7 @@ textarea.form-control-lg {
 }
 
 .accordion-item {
-  background-color: #fff;
+  background-color: #000;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 .accordion-item:first-of-type {
