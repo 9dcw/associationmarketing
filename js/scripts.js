@@ -86,3 +86,52 @@ function get_faq() {
 
   return questions
 }
+
+function checkemail() {
+  var emailText = document.getElementById('email').value
+  var valid = ValidateEmail(emailText)
+  var submitbtn = document.getElementById('submitButton')
+  var errortext = document.getElementById('invalidEmail')
+  var successtext = document.getElementById('validEmail')
+
+  var formNotice = document.getElementById('emailFormNotice')
+  //console.log(emailText)
+  if (!emailText) {
+      formNotice.style.display='inline'
+      errortext.style.display='none'
+      successtext.style.display='none'
+      submitbtn.setAttribute('class','btn btn-primary-disabled')
+      submitbtn.disabled = true
+      return
+  }
+  else {
+    formNotice.style.display='none'
+  }
+  if (valid=== true) {
+    errortext.style.display='none'
+    successtext.style.display='inline'
+    submitbtn.setAttribute('class','btn btn-primary')
+    submitbtn.disabled = false
+
+  }
+  else {
+
+    errortext.style.display='inline'
+    successtext.style.display='none'
+    submitbtn.setAttribute('class','btn btn-primary-disabled')
+    submitbtn.disabled = true
+
+  }
+
+}
+
+
+function ValidateEmail(mail)
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    //alert("You have entered an invalid email address!")
+    return (false)
+}

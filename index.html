@@ -30,11 +30,12 @@
                     <form id="contactForm">
                         <!-- Email address input-->
                         <div class="row input-group-newsletter">
-                            <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..."></div>
+                            <div class="col"><input class="form-control" id="email" type="email" oninput="checkemail()" placeholder="Enter email address..." aria-label="Enter email address..."></div>
                             <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Contact Me!</button></div>
                         </div>
-                        <div class="invalid-feedback mt-2">An email is required.</div>
-                        <div class="invalid-feedback mt-2">Email is not valid.</div>
+                        <div id="emailFormNotice" class="mt-2">An email is required.</div>
+                        <div id="invalidEmail" style="display:none" class="invalid-feedback mt-2">Email is not valid.</div>
+                        <div id="validEmail" style="display:none" class="valid-feedback mt-2">Valid!</div>
                         <!-- Submit success message-->
                         <!---->
                         <!-- This is what your users will see when the form-->
