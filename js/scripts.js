@@ -31,8 +31,7 @@ function open_faq() {
     questionLink.setAttribute('onclick', onclickfn);
     questionNode.appendChild(document.createElement('br'))
     questionNode.appendChild(questionLink);
-    //questionNode.appendChild(questionText);
-
+    
     let answerText = document.createElement("p")
     answerText.setAttribute("id","answer"+String(i))
     answerText.innerHTML =questions[i]['answer']
