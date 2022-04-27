@@ -65,7 +65,7 @@ function toggleElement(el) {
 
 async function get_faq() {
   let questions = new Array()
-  url = 'https://meaninfultexting.com/faq_content'
+  url = 'https://meaningfultexting.com/faq_content'
   const response = await fetch(url, {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
   })
