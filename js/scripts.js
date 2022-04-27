@@ -1,11 +1,11 @@
 
 
 
-function open_faq() {
+async function open_faq() {
   // get the data
 
     console.log('opening faq')
-    questions = get_faq()
+    questions = await get_faq()
     toggleElement('accordionFlushExample')
     console.log(questions)
 
@@ -63,7 +63,7 @@ function toggleElement(el) {
 
 }
 
-function get_faq() {
+async function get_faq() {
   let questions = new Array()
 
   const response = await fetch(url, {
