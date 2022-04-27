@@ -2,9 +2,9 @@
 
 var faq_data = null;
 
-async function DOMContentLoaded() {
-  faq_data = await get_faq();
-  console.log('got fac!')
+window.onload = function DOMContentLoaded() {
+  faq_data = get_faq();
+
   }
 
 async function open_faq() {
@@ -70,36 +70,25 @@ function toggleElement(el) {
 }
 
 async function get_faq() {
-  console.log('getting faq')
+
+  console.log('checking faq')
   if (faq_data != null) {
+    console.log('already got faq!')
+
     return faq_data
   }
+  console.log('getting faq')
+
   let questions = new Array()
   url = 'https://meaningful-texting-aqtiusbaaq-uc.a.run.app/faq_content'
+
   const response = await fetch(url, {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
+  }).then(function(response) {
+    return response.json()
   })
-  console.log(response.json())
-
-  let question1 = {question: 'Who is this for?',
-                  answer: 'answer coming soon!'}
-
-  questions.push(question1)
-
-  let question2 = {question: 'Can associations make money?',
-                  answer: 'answer coming soon!'}
-  questions.push(question2)
-
-  let question3 = {question: 'How much money?',
-                  answer: 'answer coming soon!'}
-  questions.push(question3)
-
-  let question4 = {question: 'How much money?',
-                  answer: 'answer coming soon!'}
-
-
-
-  return questions
+  
+  return response
 }
 
 function checkemail() {
