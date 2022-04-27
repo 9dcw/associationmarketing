@@ -100,7 +100,7 @@ function checkemail() {
       formNotice.style.display='inline'
       errortext.style.display='none'
       successtext.style.display='none'
-      submitbtn.setAttribute('class','btn btn-primary-disabled')
+      submitbtn.setAttribute('class','btn btn-primary')
       submitbtn.disabled = true
       return
   }
@@ -118,7 +118,7 @@ function checkemail() {
 
     errortext.style.display='inline'
     successtext.style.display='none'
-    submitbtn.setAttribute('class','btn btn-primary-disabled')
+    submitbtn.setAttribute('class','btn btn-primary')
     submitbtn.disabled = true
 
   }
