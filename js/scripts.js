@@ -68,7 +68,7 @@ async function get_faq() {
 
   const response = await fetch(url, {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
-  }
+  })
   console.log(response.json())
 
   let question1 = {question: 'Who is this for?',
