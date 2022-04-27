@@ -128,6 +128,7 @@ function checkemail() {
 
 function submitEmail() {
   sender = document.getElementById('email').value
+  console.log('submitting email '+ sender)
   let form = new FormData();
   form.append('sender',sender);
 
