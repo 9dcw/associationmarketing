@@ -126,6 +126,31 @@ function checkemail() {
 }
 
 
+function submitEmail() {
+  sender = document.getElementById('email').value
+  let form = new FormData();
+  form.append('sender',sender);
+
+  fetch('https://meaninfultexting.com/email_signup', {
+      method: 'POST',
+      body: form
+  })
+      .then(function(response) {
+          return response.text()
+          console.log('received clip')
+          document.getElementById('submitSuccessMessage').style.display='inline'
+
+      } )
+      .catch(function(error) {
+        document.getElementById('submitErrorMessage').style.display='inline'
+
+        console.log('error ' + String(error))
+        }
+      )
+
+
+}
+
 function ValidateEmail(mail)
 {
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
