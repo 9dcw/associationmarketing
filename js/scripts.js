@@ -132,7 +132,7 @@ function submitEmail() {
   let form = new FormData();
   form.append('sender',sender);
 
-  fetch('https://meaninfultexting.com/email_signup', {
+  fetch('https://meaningful-texting-aqtiusbaaq-uc.a.run.app/email_signup', {
       method: 'POST',
       body: form
   })

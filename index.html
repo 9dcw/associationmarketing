@@ -31,7 +31,7 @@
                         <!-- Email address input-->
                         <div class="row input-group-newsletter">
                             <div class="col"><input class="form-control" id="email" type="email" oninput="checkemail()" placeholder="Enter email address..." aria-label="Enter email address..."></div>
-                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Contact Me!</button></div>
+                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" onclick="submitEmail()" type="button">Contact Me!</button></div>
                         </div>
                         <div id="emailFormNotice" class="mt-2">An email is required.</div>
                         <div id="invalidEmail" style="display:none" class="invalid-feedback mt-2">Email is not valid.</div>
@@ -40,7 +40,7 @@
                         <!---->
                         <!-- This is what your users will see when the form-->
                         <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
+                        <div id="submitSuccessMessage" style="display:none">
                             <div class="text-center mb-3 mt-2">
                                 <div class="fw-bolder">Form submission successful!</div>
                             </div>
@@ -49,7 +49,7 @@
                         <!---->
                         <!-- This is what your users will see when there is-->
                         <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        <div style="display:none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
                     </form>
                   <br>
                   <div class="accordion accordion-flush" id="accordionFlushExample"  style="display:none">
