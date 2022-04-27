@@ -66,6 +66,11 @@ function toggleElement(el) {
 function get_faq() {
   let questions = new Array()
 
+  const response = await fetch(url, {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+  }
+  console.log(response.json())
+
   let question1 = {question: 'Who is this for?',
                   answer: 'answer coming soon!'}
 
