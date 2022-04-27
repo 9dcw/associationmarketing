@@ -1,5 +1,11 @@
 
 
+var faq_data = null;
+
+async function DOMContentLoaded() {
+  faq_data = await get_faq();
+  console.log('got fac!')
+  }
 
 async function open_faq() {
   // get the data
@@ -64,6 +70,10 @@ function toggleElement(el) {
 }
 
 async function get_faq() {
+  console.log('getting faq')
+  if (faq_data != null) {
+    return faq_data
+  }
   let questions = new Array()
   url = 'https://meaningful-texting-aqtiusbaaq-uc.a.run.app/faq_content'
   const response = await fetch(url, {
