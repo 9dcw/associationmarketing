@@ -87,7 +87,7 @@ async function get_faq() {
   }).then(function(response) {
     return response.json()
   })
-  
+
   return response
 }
 
@@ -141,10 +141,10 @@ function submitEmail() {
       body: form
   })
       .then(function(response) {
-          return response.text()
+
           console.log('received clip')
           document.getElementById('submitSuccessMessage').style.display='inline'
-
+          return response.text()
       } )
       .catch(function(error) {
         document.getElementById('submitErrorMessage').style.display='inline'
